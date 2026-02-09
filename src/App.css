@@ -1,31 +1,108 @@
 body {
   margin: 0;
-  background: #0b0b0b;
-  color: white;
-  font-family: system-ui, Arial, sans-serif;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* premium dark gradient */
+  background: linear-gradient(135deg, #070a0a, #0c1211, #101a17);
 }
 
 .container {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
-}
+  width: 100%;
+  max-width: 1050px;
+  padding: 60px 50px;
+  border-radius: 24px;
 
-.card {
-  background: #141414;
-  padding: 18px;
-  border-radius: 14px;
-  margin-top: 15px;
-  border: 1px solid #222;
-}
+  /* soft glass panel */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(14px);
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.60),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
 }
 
 h1 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  color: #eafff6;
+}
+
+header p {
   margin: 0;
-  color: #39ff14;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(234, 255, 246, 0.70);
+}
+
+.card {
+  margin-top: 18px;
+  padding: 22px 24px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+
+  transition: transform 0.15s ease, border 0.15s ease;
+}
+
+/* Premium hover lift */
+.card:hover {
+  transform: translateY(-2px);
+  border: 1px solid rgba(46, 255, 190, 0.25);
+}
+
+.card h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 750;
+  color: #cffff1;
+}
+
+p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(234, 255, 246, 0.82);
+}
+
+b {
+  color: rgba(234, 255, 246, 0.92);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* Status */
+.active {
+  color: #2effbe; /* emerald neon */
+  font-weight: 800;
+}
+
+.inactive {
+  color: #ff5c5c;
+  font-weight: 800;
 }
