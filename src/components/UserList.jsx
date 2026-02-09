@@ -1,0 +1,16 @@
+import UserCard from "./UserCard";
+
+export default function UserList({ users }) {
+  return (
+    <div className="grid">
+      {users.map((user) => (
+        <UserCard
+          key={user.id}
+          name={user.name}
+          role={user.role}
+          status={user.status}
+        />
+      ))}
+    </div>
+  );
+}
